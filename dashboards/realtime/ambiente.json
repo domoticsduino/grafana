@@ -87,7 +87,7 @@
           "placement": "right"
         },
         "tooltip": {
-          "mode": "single"
+          "mode": "multi"
         }
       },
       "targets": [
@@ -313,7 +313,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.3.4",
+      "pluginVersion": "8.3.6",
       "targets": [
         {
           "alias": "Sensore crepuscolare",
@@ -423,7 +423,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.3.4",
+      "pluginVersion": "8.3.6",
       "targets": [
         {
           "alias": "Temperatura esterna",
@@ -518,7 +518,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.3.4",
+      "pluginVersion": "8.3.6",
       "targets": [
         {
           "alias": "Gas Cucina",
@@ -582,6 +582,6 @@
   "timezone": "",
   "title": "Ambiente",
   "uid": "zJA-W-RRz",
-  "version": 11,
+  "version": 12,
   "weekStart": ""
 }
