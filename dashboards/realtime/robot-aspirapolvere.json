@@ -82,7 +82,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 16,
+        "h": 11,
         "w": 24,
         "x": 0,
         "y": 0
@@ -174,7 +174,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 16
+        "y": 11
       },
       "hideTimeOverride": true,
       "id": 4,
@@ -193,7 +193,7 @@
           "titleSize": 16
         }
       },
-      "pluginVersion": "8.3.4",
+      "pluginVersion": "8.3.6",
       "targets": [
         {
           "alias": "$tag_item",
