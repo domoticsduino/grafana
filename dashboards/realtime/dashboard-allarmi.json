@@ -3,7 +3,10 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -26,6 +29,10 @@
   "liveNow": false,
   "panels": [
     {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -79,7 +86,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 5,
+        "h": 7,
         "w": 12,
         "x": 0,
         "y": 0
@@ -92,7 +99,8 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "multi"
+          "mode": "multi",
+          "sort": "none"
         }
       },
       "targets": [
@@ -130,6 +138,10 @@
       "type": "timeseries"
     },
     {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -183,7 +195,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 5,
+        "h": 7,
         "w": 12,
         "x": 12,
         "y": 0
@@ -196,7 +208,8 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "multi"
+          "mode": "multi",
+          "sort": "none"
         }
       },
       "targets": [
@@ -234,6 +247,10 @@
       "type": "timeseries"
     },
     {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -288,10 +305,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 6,
         "w": 12,
         "x": 0,
-        "y": 5
+        "y": 7
       },
       "id": 5,
       "options": {
@@ -301,7 +318,8 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "multi"
+          "mode": "multi",
+          "sort": "none"
         }
       },
       "targets": [
@@ -339,6 +357,10 @@
       "type": "timeseries"
     },
     {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -393,10 +415,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 6,
         "w": 12,
         "x": 12,
-        "y": 5
+        "y": 7
       },
       "id": 3,
       "options": {
@@ -406,7 +428,8 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "multi"
+          "mode": "multi",
+          "sort": "none"
         }
       },
       "targets": [
@@ -444,6 +467,10 @@
       "type": "timeseries"
     },
     {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -498,10 +525,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 6,
         "w": 12,
         "x": 0,
-        "y": 9
+        "y": 13
       },
       "id": 8,
       "options": {
@@ -511,7 +538,8 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "multi"
+          "mode": "multi",
+          "sort": "none"
         }
       },
       "targets": [
@@ -549,6 +577,10 @@
       "type": "timeseries"
     },
     {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -603,10 +635,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 6,
         "w": 12,
         "x": 12,
-        "y": 9
+        "y": 13
       },
       "id": 9,
       "options": {
@@ -616,7 +648,8 @@
           "placement": "bottom"
         },
         "tooltip": {
-          "mode": "multi"
+          "mode": "multi",
+          "sort": "none"
         }
       },
       "targets": [
@@ -654,6 +687,10 @@
       "type": "timeseries"
     },
     {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -681,7 +718,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 13
+        "y": 19
       },
       "id": 7,
       "options": {
@@ -697,7 +734,7 @@
         "showThresholdMarkers": false,
         "text": {}
       },
-      "pluginVersion": "8.3.6",
+      "pluginVersion": "8.5.2",
       "targets": [
         {
           "alias": "$tag_item",
@@ -736,7 +773,7 @@
       "type": "gauge"
     }
   ],
-  "schemaVersion": 34,
+  "schemaVersion": 36,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -750,6 +787,6 @@
   "timezone": "",
   "title": "Dashboard Allarmi",
   "uid": "QRrlc_zgz",
-  "version": 3,
+  "version": 4,
   "weekStart": ""
 }
