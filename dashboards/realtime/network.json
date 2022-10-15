@@ -3,7 +3,10 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -27,6 +30,10 @@
   "panels": [
     {
       "collapsed": true,
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -36,6 +43,10 @@
       "id": 8,
       "panels": [
         {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -94,7 +105,7 @@
             "text": {},
             "textMode": "auto"
           },
-          "pluginVersion": "8.3.4",
+          "pluginVersion": "8.3.6",
           "targets": [
             {
               "alias": "$tag_item",
@@ -132,11 +143,24 @@
           "type": "stat"
         }
       ],
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
+          "refId": "A"
+        }
+      ],
       "title": "STATUS",
       "type": "row"
     },
     {
       "collapsed": true,
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -146,6 +170,10 @@
       "id": 6,
       "panels": [
         {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -207,7 +235,8 @@
             "legend": {
               "calcs": [],
               "displayMode": "list",
-              "placement": "bottom"
+              "placement": "bottom",
+              "showLegend": true
             },
             "tooltip": {
               "mode": "single"
@@ -268,6 +297,10 @@
           "type": "timeseries"
         },
         {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -329,7 +362,8 @@
             "legend": {
               "calcs": [],
               "displayMode": "list",
-              "placement": "bottom"
+              "placement": "bottom",
+              "showLegend": true
             },
             "tooltip": {
               "mode": "single"
@@ -384,6 +418,10 @@
           "type": "timeseries"
         },
         {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -445,7 +483,8 @@
             "legend": {
               "calcs": [],
               "displayMode": "list",
-              "placement": "right"
+              "placement": "right",
+              "showLegend": true
             },
             "tooltip": {
               "mode": "single"
@@ -500,11 +539,24 @@
           "type": "timeseries"
         }
       ],
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
+          "refId": "A"
+        }
+      ],
       "title": "PING",
       "type": "row"
     },
     {
-      "collapsed": false,
+      "collapsed": true,
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -512,19 +564,426 @@
         "y": 2
       },
       "id": 12,
-      "panels": [],
+      "panels": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "axisSoftMin": -1,
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "smooth",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "never",
+                "spanNulls": true,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "area"
+                }
+              },
+              "decimals": 0,
+              "mappings": [],
+              "max": 100,
+              "min": 0,
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "red"
+                  },
+                  {
+                    "color": "yellow",
+                    "value": 30
+                  },
+                  {
+                    "color": "green",
+                    "value": 60
+                  }
+                ]
+              },
+              "unit": "percent"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 13,
+            "w": 24,
+            "x": 0,
+            "y": 3
+          },
+          "id": 14,
+          "options": {
+            "legend": {
+              "calcs": [],
+              "displayMode": "table",
+              "placement": "right",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "multi"
+            }
+          },
+          "targets": [
+            {
+              "alias": "$tag_item",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "aI7z3bggk"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "item"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "wifi_signal",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [
+                      10
+                    ],
+                    "type": "moving_average"
+                  }
+                ]
+              ],
+              "tags": []
+            }
+          ],
+          "title": "Segnale WIFI",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "custom": {
+                "align": "auto",
+                "displayMode": "auto",
+                "filterable": false
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 16
+          },
+          "hideTimeOverride": true,
+          "id": 16,
+          "options": {
+            "footer": {
+              "fields": "",
+              "reducer": [
+                "sum"
+              ],
+              "show": false
+            },
+            "frameIndex": 2,
+            "showHeader": false
+          },
+          "pluginVersion": "8.3.6",
+          "targets": [
+            {
+              "alias": "$tag_item",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "aI7z3bggk"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "item"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "wifi_ssid",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "query": "SELECT last(\"value\") FROM \"wifi_ssid\" WHERE $timeFilter GROUP BY \"item\"",
+              "rawQuery": false,
+              "refId": "A",
+              "resultFormat": "table",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "last"
+                  }
+                ]
+              ],
+              "tags": []
+            }
+          ],
+          "timeFrom": "1d",
+          "title": "SSID",
+          "type": "table"
+        }
+      ],
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
+          "refId": "A"
+        }
+      ],
       "title": "WIFI",
       "type": "row"
     },
     {
+      "collapsed": false,
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 3
+      },
+      "id": 18,
+      "panels": [],
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "SPEEDTEST",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "palette-classic"
           },
           "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 1,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ptNetworkSpeedtestJitter"
+            },
+            "properties": [
+              {
+                "id": "custom.axisPlacement",
+                "value": "right"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 4
+      },
+      "id": 22,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "alias": "$tag_item",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "aI7z3bggk"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "item"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "speedtest",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [
+                  10
+                ],
+                "type": "moving_average"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "item",
+              "operator": "=",
+              "value": "ptNetworkSpeedtestJitter"
+            },
+            {
+              "condition": "OR",
+              "key": "item",
+              "operator": "=",
+              "value": "ptNetworkSpeedtestLatency"
+            }
+          ]
+        }
+      ],
+      "title": "Jitter / Latency",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "left",
             "axisSoftMin": -1,
             "barAlignment": 0,
             "drawStyle": "line",
@@ -548,74 +1007,64 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "area"
+              "mode": "off"
             }
           },
           "decimals": 0,
           "mappings": [],
-          "max": 100,
+          "max": 35,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "red",
+                "color": "green",
                 "value": null
               },
               {
-                "color": "yellow",
-                "value": 30
-              },
-              {
-                "color": "green",
-                "value": 60
+                "color": "red",
+                "value": 80
               }
             ]
           },
-          "unit": "percent"
+          "unit": "Mbits"
         },
         "overrides": [
           {
-            "__systemRef": "hideSeriesFrom",
             "matcher": {
-              "id": "byNames",
-              "options": {
-                "mode": "exclude",
-                "names": [
-                  "ptSonoff4CHR216WifiSignal"
-                ],
-                "prefix": "All except:",
-                "readOnly": true
-              }
+              "id": "byName",
+              "options": "ptNetworkSpeedtestUpload"
             },
             "properties": [
               {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": true
-                }
+                "id": "custom.axisPlacement",
+                "value": "right"
+              },
+              {
+                "id": "max",
+                "value": 4.5
               }
             ]
           }
         ]
       },
       "gridPos": {
-        "h": 13,
-        "w": 24,
-        "x": 0,
-        "y": 3
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 4
       },
-      "id": 14,
+      "id": 20,
       "options": {
         "legend": {
           "calcs": [],
-          "displayMode": "table",
-          "placement": "right"
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
         },
         "tooltip": {
-          "mode": "single"
+          "mode": "multi",
+          "sort": "none"
         }
       },
       "targets": [
@@ -633,9 +1082,11 @@
               "type": "tag"
             }
           ],
-          "measurement": "wifi_signal",
+          "measurement": "speedtest",
           "orderByTime": "ASC",
           "policy": "default",
+          "query": "SELECT \"value\" FROM \"speedtest\" WHERE (\"item\" = 'ptNetworkSpeedtestDownload' OR \"item\" = 'ptNetworkSpeedtestUpload') AND $timeFilter GROUP BY item",
+          "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
           "select": [
@@ -654,61 +1105,185 @@
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "item",
+              "operator": "=",
+              "value": "ptNetworkSpeedtestDownload"
+            },
+            {
+              "condition": "OR",
+              "key": "item",
+              "operator": "=",
+              "value": "ptNetworkSpeedtestUpload"
+            }
+          ]
         }
       ],
-      "title": "Segnale WIFI",
+      "title": "Bandwidth",
       "type": "timeseries"
     },
     {
-      "description": "",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "aI7z3bggk"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
-          "custom": {
-            "align": "auto",
-            "displayMode": "auto",
-            "filterable": false
-          },
+          "decimals": 0,
           "mappings": [],
+          "max": 35,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "red",
                 "value": null
               },
               {
-                "color": "red",
-                "value": 80
+                "color": "yellow",
+                "value": 10
+              },
+              {
+                "color": "green",
+                "value": 20
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ptNetworkSpeedtestUpload"
+            },
+            "properties": [
+              {
+                "id": "max",
+                "value": 3
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "red",
+                      "value": null
+                    },
+                    {
+                      "color": "yellow",
+                      "value": 0.5
+                    },
+                    {
+                      "color": "green",
+                      "value": 1.5
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ptNetworkSpeedtestJitter"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              },
+              {
+                "id": "max"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "yellow",
+                      "value": 30
+                    },
+                    {
+                      "color": "red",
+                      "value": 100
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "max"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ptNetworkSpeedtestLatency"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              },
+              {
+                "id": "max"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "yellow",
+                      "value": 30
+                    },
+                    {
+                      "color": "red",
+                      "value": 100
+                    }
+                  ]
+                }
               }
             ]
           }
-        },
-        "overrides": []
+        ]
       },
       "gridPos": {
-        "h": 7,
+        "h": 10,
         "w": 24,
         "x": 0,
-        "y": 16
+        "y": 12
       },
-      "hideTimeOverride": true,
-      "id": 16,
+      "id": 24,
       "options": {
-        "footer": {
-          "fields": "",
-          "reducer": [
-            "sum"
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
           ],
-          "show": false
+          "fields": "",
+          "values": false
         },
-        "frameIndex": 2,
-        "showHeader": false
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
       },
-      "pluginVersion": "8.3.4",
+      "pluginVersion": "9.1.5",
       "targets": [
         {
           "alias": "$tag_item",
@@ -724,13 +1299,11 @@
               "type": "tag"
             }
           ],
-          "measurement": "wifi_ssid",
+          "measurement": "speedtest",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT last(\"value\") FROM \"wifi_ssid\" WHERE $timeFilter GROUP BY \"item\"",
-          "rawQuery": false,
           "refId": "A",
-          "resultFormat": "table",
+          "resultFormat": "time_series",
           "select": [
             [
               {
@@ -738,35 +1311,31 @@
                   "value"
                 ],
                 "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
               }
             ]
           ],
           "tags": []
         }
       ],
-      "timeFrom": "1d",
-      "title": "SSID",
-      "type": "table"
+      "timeFrom": "1h",
+      "title": "Real Time",
+      "type": "gauge"
     }
   ],
-  "schemaVersion": 34,
+  "schemaVersion": 37,
   "style": "dark",
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-24h",
+    "from": "now-2d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Network",
   "uid": "oYBCxuggz",
-  "version": 7,
+  "version": 17,
   "weekStart": ""
 }
